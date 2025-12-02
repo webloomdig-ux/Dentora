@@ -1,0 +1,317 @@
+:root {
+    --brand-primary: #0B6FA6; /* (logo, main buttons, important highlights) */
+    --surface-light: #E9F4FB; /* large section backgrounds, hero areas, soft surfaces */
+    --surface-muted: #F5FAFD; /* cards, form fields, subtle blocks, low-noise areas */
+    --brand-accent: #00A3D6; /* secondary buttons, icons, links, decorative touches */
+
+    --text-main: #12384A; /* body text, headings, readable content on light backgrounds */
+
+    --pure-white: #FFFFFF; /* Clean sections, cards, hero foregrounds */
+    --deep-night: #0A1A24; /* High-contrast text, dark overlays, footers */
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --font-lato: 'Lato', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+
+    /* Shadows */
+    --shadow-light: 0 2px 6px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Settings */
+body {
+    font-family: var(--font-lato);
+    background-color: var(--pure-white);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--surface-light); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease;
+    /* Add these to prevent any potential overflow */
+    overflow: hidden;
+    max-width: 100vw;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px dotted var(--brand-accent);
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+    /* Ensure loader stays within bounds */
+    max-width: 100%;
+}
+
+.loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px dotted var(--brand-primary);
+    border-style: solid solid dotted;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotationBack 1s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+    @keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+} 
+
+/* Hide content until loader finishes */
+.content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Haeder =========================================================================================================================== */
+header {
+    padding: 10px 0;
+    background-color: var(--brand-primary);
+    color: var(--pure-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .contact-infos {
+    display: flex;
+    align-items: center;
+}
+
+header .contact-infos div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+header .contact-infos i {
+    font-size: 1rem;
+    color: var(--surface-light);
+}
+
+header .contact-infos div:hover {
+    color: var(--surface-light);
+}
+
+header .contact-infos div:hover i {
+    color: var(--brand-accent);
+    transform: translateY(-1px);
+}
+
+header .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .social-icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+header .social-icons span i {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    color: var(--surface-light);
+}
+
+header .social-icons span:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+header .social-icons span:hover i {
+    color: var(--brand-accent);
+    transform: scale(1.1);
+}
+
+/* Instagram hover gradient */
+header .social-icons .instagram:hover {
+    background: linear-gradient(45deg,
+        #405DE6, #5851DB, #833AB4,
+        #C13584, #E1306C, #FD1D1D
+    );
+}
+
+/* WhatsApp hover */
+header .social-icons .whatsapp:hover {
+    background: #25D366;
+}
+
+header .social-icons .whatsapp:hover i {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center; 
+    }
+
+    header .contact-infos {
+        display: none !important;
+    }
+
+    header .social-icons {
+        margin: 0 auto;
+    }
+}
+
+/* Navbar ========================================================================================================================== */
+.custom-navbar {
+    background: var(--pure-white);
+    padding: 15px 0;
+    box-shadow: var(--shadow-light);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+
+/* LOGO */
+.navbar-brand .logo {
+    height: 45px;
+    object-fit: contain;
+}
+
+/* LINKS */
+.nav-link {
+    color: var(--text-main);
+    font-weight: 500;
+    font-family: var(--font-roboto);
+    padding: 8px 14px !important;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--brand-primary);
+    background: rgba(11, 111, 166, 0.1);
+    border-radius: 6px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    background: var(--brand-primary);
+    color: var(--pure-white) !important;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: var(--brand-accent);
+}
+
+/* HAMBURGER MENU */
+.custom-toggler {
+    border: none;
+    background: transparent;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.custom-toggler:focus,
+.custom-toggler:active,
+.custom-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.custom-toggler span {
+    height: 3px;
+    width: 100%;
+    background: var(--brand-primary);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* OFFCANVAS */
+.mobile-menu {
+    width: 280px;
+    background: var(--pure-white);
+}
+
+.mobile-menu .offcanvas-title {
+    color: var(--brand-primary);
+    font-family: var(--font-heading);
+}
+
+.mobile-menu .nav-link {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.mobile-menu .nav-link:hover {
+    color: var(--brand-primary);
+}
+
+/* CTA inside offcanvas */
+.mobile-menu .cta-btn {
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 991px) {
+    .navbar-brand .logo {
+        height: 30px;
+    }
+}

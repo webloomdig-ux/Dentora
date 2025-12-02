@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentora - Le Soin Dentaire, Réinventé</title>
+
+    <!-- Google Fonts: Montserrat, Open Sans, Lato, Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" 
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (CSS) -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Font awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Css style file -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Header -->
+        <header class="container-fluid d-flex">
+            <div class="contact-infos d-flex gap-3">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +212 6 44 55 66 77 88
+                </div>
+                <div class="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    dentora.care@gmail.com
+                </div>
+            </div>
+            <div class="social-icons d-flex gap-2">
+                <span class="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </span>
+                <span class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </span>
+            </div>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+            <div class="container-fluid">
+
+                <!-- BRAND -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/imgs/dentore-removebg-preview.png" alt="Dentora Logo" class="logo">
+                </a>
+
+                <!-- HAMBURGER / TOGGLER (Mobile) -->
+                <button class="navbar-toggler custom-toggler" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu"
+                        aria-controls="mobileMenu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!-- DESKTOP LINKS -->
+                <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                    <ul class="navbar-nav align-items-center gap-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#accueil">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                        <!-- CTA BUTTON -->
+                        <li class="nav-item">
+                            <a class="btn cta-btn" href="#reservation">Réserver maintenant</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!-- 🔵 OFFCANVAS MENU (Mobile + Tablet) -->
+        <div class="offcanvas offcanvas-end mobile-menu" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bold">Dentora</h5>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav text-center gap-3">
+                    <li><a class="nav-link" href="#accueil" data-bs-dismiss="offcanvas">Accueil</a></li>
+                    <li><a class="nav-link" href="#about" data-bs-dismiss="offcanvas">À propos</a></li>
+                    <li><a class="nav-link" href="#services" data-bs-dismiss="offcanvas">Services</a></li>
+                    <li><a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">Contact</a></li>
+                    <li><a class="btn cta-btn w-75 mx-auto" href="#reservation" data-bs-dismiss="offcanvas">Réserver maintenant</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+    <!-- Loader -->
+    <script src="js/loader.js"></script>
+    <!-- Navbar close -->
+    <script src="js/nav-close.js"></script>
+
+</body>
+</html>
