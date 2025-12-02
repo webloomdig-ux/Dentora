@@ -229,8 +229,8 @@ header .social-icons .whatsapp:hover i {
 /* LINKS */
 .nav-link {
     color: var(--text-main);
-    font-weight: 500;
-    font-family: var(--font-roboto);
+    font-weight: 600;
+    font-family: var(--font-lato);
     padding: 8px 14px !important;
     transition: 0.3s ease;
 }
@@ -289,8 +289,12 @@ header .social-icons .whatsapp:hover i {
     background: var(--pure-white);
 }
 
+.mobile-menu .offcanvas-header {
+    background-color: var(--brand-primary);
+    color: var(--pure-white);
+}
+
 .mobile-menu .offcanvas-title {
-    color: var(--brand-primary);
     font-family: var(--font-heading);
 }
 
