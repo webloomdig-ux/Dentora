@@ -422,3 +422,133 @@ header .social-icons .whatsapp:hover i {
     margin-top: 1rem;
     font-size: 1.1rem;
 }
+
+/* Services ======================================================================================================================== */
+#services {
+    color: var(--text-main);
+}
+
+.section-title span {
+    display: block;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--deep-night);
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: var(--text-main);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: var(--pure-white);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: start;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.service-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    text-decoration: none;
+    padding: 0.625rem 0;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    position: relative;
+}
+
+.service-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--brand-accent);
+    transition: width 0.3s ease;
+}
+
+.service-link:hover {
+    color: var(--brand-accent);
+    gap: 0.75rem;
+}
+
+.service-link:hover::after {
+    width: 100%;
+}
+
+.service-link svg {
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover svg {
+    transform: translateX(3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .service-card {
+        padding: 15px;
+    }
+    .service-img img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-title h1 {
+        font-size: 2rem;
+    }
+    .service-title {
+        font-size: 1.1rem;
+    }
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
