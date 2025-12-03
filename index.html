@@ -511,7 +511,266 @@
                     </div>
                 </div>
             </section>
-            <!-- /end Testimonials -->
+
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact" aria-label="Contactez Dentora">
+                <div class="container">
+                    <div class="contact-grid">
+                        <!-- Contact Form Column -->
+                        <div class="contact-form-column">
+                            <div class="form-wrapper">
+                                <!-- Form Header -->
+                                <div class="form-header">
+                                    <div class="form-label">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0034 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.9C9.87812 3.30493 11.1801 2.99656 12.5 3H13C15.0843 3.11499 17.053 3.99477 18.5291 5.47087C20.0052 6.94696 20.885 8.91565 21 11V11.5Z" stroke="var(--brand-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Prise de rendez-vous</span>
+                                    </div>
+                                    <h2 class="form-title">Prenez rendez-vous en ligne</h2>
+                                    <p class="form-description">Réservez votre consultation en moins de 2 minutes</p>
+                                </div>
+
+                                <!-- Contact Form -->
+                                <form class="contact-form" id="appointmentForm" aria-label="Formulaire de rendez-vous">
+                                    <!-- Full Name -->
+                                    <div class="form-group">
+                                        <label for="fullName" class="form-label">
+                                            <i class="fas fa-user"></i>
+                                            Nom complet *
+                                        </label>
+                                        <input type="text" 
+                                            id="fullName" 
+                                            name="fullName" 
+                                            placeholder="Votre nom et prénom" 
+                                            required
+                                            aria-required="true"
+                                            class="form-control">
+                                        <div class="form-error" id="nameError" role="alert"></div>
+                                    </div>
+
+                                    <!-- Email & Phone Row -->
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">
+                                                <i class="fas fa-envelope"></i>
+                                                Email *
+                                            </label>
+                                            <input type="email" 
+                                                id="email" 
+                                                name="email" 
+                                                placeholder="exemple@email.com" 
+                                                required
+                                                aria-required="true"
+                                                class="form-control">
+                                            <div class="form-error" id="emailError" role="alert"></div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">
+                                                <i class="fas fa-phone"></i>
+                                                Téléphone *
+                                            </label>
+                                            <input type="tel" 
+                                                id="phone" 
+                                                name="phone" 
+                                                placeholder="+212 6 XX XX XX XX" 
+                                                required
+                                                aria-required="true"
+                                                class="form-control">
+                                            <div class="form-error" id="phoneError" role="alert"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Date & Time Row -->
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="appointmentDay" class="form-label">
+                                                <i class="fas fa-calendar-day"></i>
+                                                Date souhaitée *
+                                            </label>
+                                            <select id="appointmentDay" 
+                                                    name="appointmentDay" 
+                                                    required
+                                                    aria-required="true"
+                                                    class="form-control">
+                                                <option value="" disabled selected>Sélectionnez un jour</option>
+                                                <option value="today">Aujourd'hui</option>
+                                                <option value="tomorrow">Demain</option>
+                                                <option value="day3">Dans 2 jours</option>
+                                                <option value="day4">Dans 3 jours</option>
+                                                <option value="day5">Dans 4 jours</option>
+                                                <option value="day6">Dans 5 jours</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="appointmentTime" class="form-label">
+                                                <i class="fas fa-clock"></i>
+                                                Heure *
+                                            </label>
+                                            <select id="appointmentTime" 
+                                                    name="appointmentTime" 
+                                                    required
+                                                    aria-required="true"
+                                                    class="form-control">
+                                                <option value="" disabled selected>Choisissez une heure</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="18:00">18:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message -->
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">
+                                            <i class="fas fa-comment-medical"></i>
+                                            Message (optionnel)
+                                        </label>
+                                        <textarea id="message" 
+                                                name="message" 
+                                                rows="4" 
+                                                placeholder="Décrivez brièvement la raison de votre visite..."
+                                                class="form-control"></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="submit-btn" aria-label="Soumettre la demande de rendez-vous">
+                                        <span class="btn-text">Confirmer le rendez-vous</span>
+                                        <span class="btn-icon">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    <!-- Privacy Notice -->
+                                    <p class="privacy-notice">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Vos données sont traitées confidentiellement selon notre 
+                                        <a href="#privacy" class="privacy-link">politique de confidentialité</a>.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info Column -->
+                        <div class="contact-info-column">
+                            <div class="info-wrapper">
+                                <!-- Section Label -->
+                                <div class="section-label">
+                                    <span class="label-text">Contactez-nous</span>
+                                </div>
+
+                                <!-- Main Heading -->
+                                <h2 class="info-heading">
+                                    Prenez contact 
+                                    <span class="highlight">avec notre équipe</span>
+                                </h2>
+
+                                <!-- Welcome Paragraph -->
+                                <div class="welcome-paragraph">
+                                    <p>
+                                        Chez <strong>Dentora</strong>, nous croyons en une approche personnalisée des soins dentaires. 
+                                        Notre équipe de dentistes expérimentés est là pour vous accueillir dans un environnement 
+                                        moderne et rassurant, où votre santé et votre confort sont nos priorités absolues.
+                                    </p>
+                                </div>
+
+                                <!-- Contact Details -->
+                                <div class="contact-details">
+                                    <!-- Phone -->
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <div class="icon-wrapper">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="contact-content">
+                                            <h3 class="contact-label">Téléphone</h3>
+                                            <a href="tel:+21264455667788" class="contact-value" aria-label="Appeler Dentora">
+                                                +212 6 44 55 66 77 88
+                                            </a>
+                                            <p class="contact-subtext">Lun-Ven: 8h-18h • Sam: 9h-13h</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <div class="icon-wrapper">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                        <div class="contact-content">
+                                            <h3 class="contact-label">Email</h3>
+                                            <a href="mailto:dentora.care@gmail.com" class="contact-value" aria-label="Envoyer un email à Dentora">
+                                                dentora.care@gmail.com
+                                            </a>
+                                            <p class="contact-subtext">Réponse sous 24 heures</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <div class="icon-wrapper">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="contact-content">
+                                            <h3 class="contact-label">Adresse</h3>
+                                            <address class="contact-value">
+                                                Avenue Hassan II, N°123<br>
+                                                Centre Ville, Agadir<br>
+                                                Maroc
+                                            </address>
+                                            <a href="https://maps.google.com/?q=Dentora+Agadir" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                class="location-link"
+                                                aria-label="Voir l'adresse sur Google Maps">
+                                                <i class="fas fa-directions"></i>
+                                                Voir sur la carte
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Info -->
+                                <div class="additional-info">
+                                    <div class="info-card">
+                                        <div class="card-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4>Urgences dentaires</h4>
+                                            <p>Service disponible 24h/24 pour les urgences. Appelez-nous à tout moment.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="info-card">
+                                        <div class="card-icon">
+                                            <i class="fas fa-car"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h4>Parking gratuit</h4>
+                                            <p>Place de parking réservée pour nos patients dans notre parking privé.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
     </div>
