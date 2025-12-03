@@ -495,7 +495,7 @@ header .social-icons .whatsapp:hover i {
     font-family: var(--font-heading);
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--brand-primary);
+    color: var(--deep-night);
     text-decoration: none;
     padding: 0.625rem 0;
     transition: all 0.3s ease;
@@ -510,12 +510,12 @@ header .social-icons .whatsapp:hover i {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--brand-accent);
+    background: var(--text-main);
     transition: width 0.3s ease;
 }
 
 .service-link:hover {
-    color: var(--brand-accent);
+    color: var(--text-main);
     gap: 0.75rem;
 }
 
@@ -839,4 +839,185 @@ header .social-icons .whatsapp:hover i {
     .btn-primary, .btn-secondary {
         width: 100%;
     }
+}
+
+/* Testimonials ==================================================================================================================== */
+.testimonials-section {
+    padding: 5rem 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: .9rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-slide {
+    flex: 0 0 33.333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.testimonial-card {
+    background-color: var(--surface-muted);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.testimonial-info {
+    flex: 1;
+}
+
+.testimonial-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-rating {
+    color: #F59E0B;
+    font-size: 1rem;
+}
+
+.testimonial-text {
+    color: var(--text-main);
+    font-style: italic;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.carousel-btn {
+    background-color: var(--deep-night);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.carousel-btn:hover {
+    background-color: var(--brand-primary);
+    transform: scale(1.1);
+}
+
+.carousel-dots {
+    display: flex;
+    margin: 0 1rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--brand-accent);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--deep-night);
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .testimonial-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-slide {
+        flex: 0 0 100%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .testimonials-section {
+        padding: 3rem 1rem;
+    }
+    
+    .testimonial-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Animation for initial load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.testimonial-card {
+    animation: fadeIn 0.6s ease forwards;
 }
