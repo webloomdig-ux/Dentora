@@ -428,10 +428,10 @@ header .social-icons .whatsapp:hover i {
     color: var(--text-main);
 }
 
-.servics .section-title span {
+.services .section-title span {
     display: block;
     /* font-weight: 600; */
-    font-size: 10px;
+    font-size: 30px;
     color: var(--brand-primary);
     margin-bottom: 0.5rem;
     text-transform: uppercase;
@@ -852,8 +852,8 @@ header .social-icons .whatsapp:hover i {
     margin-bottom: 4rem;
 }
 
-.section-title {
-    font-family: 'Poppins', sans-serif;
+.testimonials-section .section-title {
+    font-family: var(--font-heading);
     font-size: 2rem;
     font-weight: 700;
     color: var(--brand-primary);
@@ -2586,7 +2586,6 @@ address.contact-value {
 }
 
 /* Location Map ================================================================================================================== */
-/* ===== LOCATION MAP SECTION ===== */
 .location-map-section {
     padding: 5rem 0;
     background-color: var(--surface-light);
@@ -2610,7 +2609,7 @@ address.contact-value {
     margin: 0 auto 3rem;
 }
 
-.section-label {
+.map-header span {
     display: inline-block;
     font-family: var(--font-heading);
     font-size: 0.875rem;
@@ -2624,19 +2623,19 @@ address.contact-value {
     margin-bottom: 1rem;
 }
 
-.section-title {
+.map-header h2 {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--deep-night);
+    color: var(--surface-light);
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
-.section-description {
+.map-header p {
     font-family: var(--font-body);
-    font-size: 1.125rem;
-    color: var(--text-main);
+    font-size: .8rem;
+    color: var(--pure-white);
     opacity: 0.8;
     line-height: 1.6;
     max-width: 600px;
@@ -2663,210 +2662,6 @@ address.contact-value {
     height: 100%;
     border: none;
     display: block;
-}
-
-/* Map Overlay */
-.map-overlay {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.location-info-card {
-    background: var(--pure-white);
-    border-radius: 16px;
-    padding: 1.5rem;
-    width: 320px;
-    box-shadow: var(--shadow-lg);
-    pointer-events: auto;
-    animation: slideInLeft 0.5s ease-out;
-}
-
-.info-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--surface-muted);
-}
-
-.info-header i {
-    color: var(--brand-primary);
-    font-size: 1.5rem;
-}
-
-.info-header h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--deep-night);
-    margin: 0;
-}
-
-.info-content {
-    margin-bottom: 1.5rem;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.info-item:last-child {
-    margin-bottom: 0;
-}
-
-.info-item i {
-    color: var(--brand-accent);
-    margin-top: 0.25rem;
-    font-size: 1rem;
-    width: 20px;
-    text-align: center;
-}
-
-.info-item strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: 0.9rem;
-    color: var(--deep-night);
-    margin-bottom: 0.25rem;
-}
-
-.info-item p,
-.info-item a {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: var(--text-main);
-    opacity: 0.9;
-    line-height: 1.4;
-    margin: 0;
-    text-decoration: none;
-}
-
-.info-item a:hover {
-    color: var(--brand-primary);
-    text-decoration: underline;
-}
-
-.info-actions {
-    display: flex;
-    gap: 0.75rem;
-}
-
-.btn-direction,
-.btn-call {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-    font-family: var(--font-heading);
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-direction {
-    background: var(--brand-primary);
-    color: var(--pure-white);
-}
-
-.btn-direction:hover {
-    background: var(--brand-accent);
-    transform: translateY(-2px);
-}
-
-.btn-call {
-    background: var(--surface-light);
-    color: var(--brand-primary);
-    border: 1px solid var(--surface-muted);
-}
-
-.btn-call:hover {
-    background: var(--surface-muted);
-    color: var(--brand-accent);
-    transform: translateY(-2px);
-}
-
-/* Directions Panel */
-.directions-panel {
-    background: var(--pure-white);
-    padding: 2rem;
-    border-top: 1px solid var(--surface-muted);
-}
-
-.panel-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-}
-
-.panel-header i {
-    color: var(--brand-primary);
-    font-size: 1.25rem;
-}
-
-.panel-header h4 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--deep-night);
-    margin: 0;
-}
-
-.transport-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.transport-item {
-    display: flex;
-    gap: 1rem;
-}
-
-.transport-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--surface-light);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.transport-icon i {
-    color: var(--brand-primary);
-    font-size: 1.25rem;
-}
-
-.transport-info h5 {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--deep-night);
-    margin-bottom: 0.5rem;
-}
-
-.transport-info p {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    color: var(--text-main);
-    opacity: 0.8;
-    line-height: 1.4;
-    margin: 0;
 }
 
 /* Landmarks Section */
@@ -2945,7 +2740,6 @@ address.contact-value {
     margin: 0;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 
 /* Large Tablets (992px - 1199px) */
 @media (max-width: 1199.98px) {
