@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentora - Le Soin Dentaire, Réinventé</title>
+
+    <!-- Google Fonts: Montserrat, Open Sans, Lato, Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" 
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+        crossorigin="anonymous">
+
+    <!-- Bootstrap Icons (CSS) -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Font awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Css style file -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Header -->
+        <header class="container-fluid d-flex">
+            <div class="contact-infos d-flex gap-3">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +212 6 44 55 66 77 88
+                </div>
+                <div class="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    dentora.care@gmail.com
+                </div>
+            </div>
+            <div class="social-icons d-flex gap-2">
+                <span class="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </span>
+                <span class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </span>
+            </div>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+            <div class="container-fluid">
+
+                <!-- BRAND -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/imgs/dentore-removebg-preview.png" alt="Dentora Logo" class="logo">
+                </a>
+
+                <!-- HAMBURGER / TOGGLER (Mobile) -->
+                <button class="navbar-toggler custom-toggler" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileMenu"
+                        aria-controls="mobileMenu">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <!-- DESKTOP LINKS -->
+                <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                    <ul class="navbar-nav align-items-center gap-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#accueil">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                        <!-- CTA BUTTON -->
+                        <li class="nav-item">
+                            <a class="btn cta-btn" href="#reservation">Réserver maintenant</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <!-- 🔵 OFFCANVAS MENU (Mobile + Tablet) -->
+        <div class="offcanvas offcanvas-start mobile-menu" tabindex="-1" id="mobileMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bold">
+                    <i class="fa-solid fa-tooth"></i>
+                    Dentora
+                </h5>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav text-start gap-3">
+                    <li><a class="nav-link" href="#accueil" data-bs-dismiss="offcanvas">Accueil</a></li>
+                    <li><a class="nav-link" href="#about" data-bs-dismiss="offcanvas">À propos</a></li>
+                    <li><a class="nav-link" href="#services" data-bs-dismiss="offcanvas">Services</a></li>
+                    <li><a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">Contact</a></li>
+                    <li><a class="btn cta-btn w-75 mx-auto" href="#reservation" data-bs-dismiss="offcanvas">Réserver maintenant</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <main>
+
+            <!-- About Section -->
+            <section class="about-section" id="about" aria-label="À propos de Dentora">
+                <div class="container-fluid">
+                    <div class="about-grid">
+
+                        <!-- About Content Column -->
+                        <div class="about-content">
+                            <div class="content-wrapper">
+                                <!-- Section Label -->
+                                <div class="section-label">
+                                    <span class="label-text">À propos de nous</span>
+                                    <div class="label-line"></div>
+                                </div>
+
+                                <!-- Main Title -->
+                                <h1 class="about-title">
+                                    Excellence Dentaire au Service 
+                                    <span class="highlight">de Votre Santé</span>
+                                </h1>
+
+                                <!-- Description -->
+                                <div class="about-description">
+                                    <p>
+                                        Fondé en 2010, <strong>Dentora</strong> est un centre de référence en soins dentaires au Maroc.
+                                        Nous combinons expertise médicale, technologie moderne et approche humaine pour des traitements complets.
+                                    </p>
+                                    <p>
+                                        Notre mission : préserver et améliorer la santé bucco-dentaire grâce à une équipe certifiée,
+                                        des équipements dernier cri et des protocoles de stérilisation rigoureux.
+                                    </p>
+                                </div>
+
+                                <!-- Key Features -->
+                                <div class="key-features">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-certificate"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h3>Certification internationale</h3>
+                                            <p>Dentistes formés aux meilleures pratiques mondiales</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-item active">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-tooth"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h3>Technologie de pointe</h3>
+                                            <p>Équipements modernes pour des diagnostics précis</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="feature-text">
+                                            <h3>Urgences 24/7</h3>
+                                            <p>Service d'urgence disponible en permanence</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Call to Action -->
+                                <div class="about-cta">
+                                    <a href="#contact" class="btn-primary" aria-label="Prendre rendez-vous avec Dentora">
+                                        <i class="fas fa-calendar-check"></i>
+                                        Prendre rendez-vous
+                                    </a>
+
+                                    <a href="#equipe" class="btn-secondary" aria-label="Rencontrer notre équipe de dentistes">
+                                        <span>Rencontrer l'équipe</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Images Column -->
+                        <div class="about-images">
+                            <div class="image-grid">
+                                <!-- Main Image -->
+                                <figure class="image-main">
+                                    <img src="assets/imgs/dental-clinic.webp" 
+                                        alt="Notre équipe de dentistes professionnels au centre Dentora" 
+                                        loading="lazy"
+                                        width="600"
+                                        height="800">
+                                </figure>
+
+                                <!-- Small Images Stack -->
+                                <div class="image-stack">
+                                    <figure class="image-small">
+                                        <img src="assets/imgs/dentist-client-2.webp" 
+                                            alt="Équipement dentaire moderne et technologie de pointe" 
+                                            loading="lazy"
+                                            width="400"
+                                            height="300">
+                                    </figure>
+
+                                    <figure class="image-small">
+                                        <img src="assets/imgs/dentist-woman.webp" 
+                                            alt="Cabinet dentaire moderne et confortable chez Dentora" 
+                                            loading="lazy"
+                                            width="400"
+                                            height="300">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="team" id="team">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="team-title text-center">
+                        <span>Notre Équipe</span>
+                        <h1>Rencontrez Nos Dentistes Experts</h1>
+                        <p>Une équipe hautement qualifiée, spécialisée dans les soins bucco-dentaires modernes.</p>
+                    </div>
+
+                    <!-- Team Members -->
+                    <div class="team-content mt-4">
+                        <div class="row justify-content-center align-items-center g-3">
+                            <!-- Member 1 -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="member-card">
+                                    <div class="member-overlay-text">
+                                        <div class="doctor-badge">
+                                            <i class="fas fa-award"></i>
+                                            <span>15 ans d'expérience</span>
+                                        </div>
+                                        <h3>Dr. Ahmed Benani</h3>
+                                        <p class="dr-specialty">Chirurgien Dentiste • Implantologie</p>
+                                        <p class="dr-description">
+                                            Spécialiste en implantologie dentaire. Diplômé de l'Université de Paris Descartes avec plus de 15 ans d'expérience.
+                                        </p>
+                                        <div class="doctor-social">
+                                            <a href="#" class="social-icon" aria-label="Profil LinkedIn du Dr. Ahmed Benani">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="#" class="social-icon" aria-label="Prendre rendez-vous avec le Dr. Ahmed Benani">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dr-img">
+                                        <img src="assets/imgs/doctor-1.webp" 
+                                            alt="Dr. Ahmed Benani - Chirurgien dentiste spécialisé en implantologie"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 2 -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="member-card">
+                                    <div class="member-overlay-text">
+                                        <div class="doctor-badge">
+                                            <i class="fas fa-award"></i>
+                                            <span>12 ans d'expérience</span>
+                                        </div>
+                                        <h3>Dr. Sophia El Amrani</h3>
+                                        <p class="dr-specialty">Orthodontiste • Invisalign</p>
+                                        <p class="dr-description">
+                                            Spécialiste en orthodontie invisible. Certifiée Invisalign avec plus de 1000 cas traités.
+                                        </p>
+                                        <div class="doctor-social">
+                                            <a href="#" class="social-icon" aria-label="Profil LinkedIn du Dr. Sophia El Amrani">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="#" class="social-icon" aria-label="Prendre rendez-vous avec le Dr. Sophia El Amrani">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dr-img">
+                                        <img src="assets/imgs/doctor-2.webp" 
+                                            alt="Dr. Sophia El Amrani - Orthodontiste spécialisée en orthodontie invisible"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 3 -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="member-card">
+                                    <div class="member-overlay-text">
+                                        <div class="doctor-badge">
+                                            <i class="fas fa-award"></i>
+                                            <span>10 ans d'expérience</span>
+                                        </div>
+                                        <h3>Dr. Karim Tazi</h3>
+                                        <p class="dr-specialty">Endodontiste • Microchirurgie</p>
+                                        <p class="dr-description">
+                                            Spécialiste en endodontie et traitement des canaux radiculaires. Utilise la technologie de microscope opératoire.
+                                        </p>
+                                        <div class="doctor-social">
+                                            <a href="#" class="social-icon" aria-label="Profil LinkedIn du Dr. Karim Tazi">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="#" class="social-icon" aria-label="Prendre rendez-vous avec le Dr. Karim Tazi">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dr-img">
+                                        <img src="assets/imgs/doctor-3.webp" 
+                                            alt="Dr. Karim Tazi - Endodontiste spécialisé en traitement des canaux"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 4 -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="member-card">
+                                    <div class="member-overlay-text">
+                                        <div class="doctor-badge">
+                                            <i class="fas fa-award"></i>
+                                            <span>8 ans d'expérience</span>
+                                        </div>
+                                        <h3>Dr. Leila Bennis</h3>
+                                        <p class="dr-specialty">Pédodontiste • Soins enfants</p>
+                                        <p class="dr-description">
+                                            Spécialiste en dentisterie pédiatrique. Approche douce et adaptée aux enfants pour une expérience positive.
+                                        </p>
+                                        <div class="doctor-social">
+                                            <a href="#" class="social-icon" aria-label="Profil LinkedIn du Dr. Leila Bennis">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="#" class="social-icon" aria-label="Prendre rendez-vous avec le Dr. Leila Bennis">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dr-img">
+                                        <img src="assets/imgs/dentist-woman.webp" 
+                                            alt="Dr. Leila Bennis - Pédodontiste spécialisée en dentisterie pour enfants"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team cta -->
+            <div class="team-cta text-center">
+                <p class="cta-text">Prêt à prendre rendez-vous avec l'un de nos experts ?</p>
+                <a href="#contact" class="btn-team">
+                    <i class="fas fa-calendar-check"></i>
+                    Prendre rendez-vous
+                </a>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo" aria-label="Pied de page">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Column 1: Brand & Description -->
+                        <div class="footer-col brand-col">
+                            <div class="brand-section">
+                                <a href="index.html" class="footer-brand" aria-label="Retour à l'accueil">
+                                    <div class="brand-logo">
+                                        <i class="fas fa-tooth fa-2x"></i>
+                                        <div class="brand-text">
+                                            <span class="brand-name">Dentora</span>
+                                            <span class="brand-tagline">Centre Dentaire d'Agadir</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                
+                                <div class="brand-description">
+                                    <p>
+                                        Votre centre dentaire de confiance à Agadir. Nous offrons des soins dentaires 
+                                        complets avec une approche moderne et humaine. Notre équipe d'experts s'engage 
+                                        à vous offrir le meilleur traitement dans un environnement chaleureux et sécurisé.
+                                    </p>
+                                </div>
+                                
+                                <!-- Trust Badges -->
+                                <div class="trust-badges">
+                                    <div class="badge">
+                                        <i class="fas fa-shield-alt text-primary"></i>
+                                        <span>Hygiène certifiée</span>
+                                    </div>
+                                    <div class="badge">
+                                        <i class="fas fa-award text-primary"></i>
+                                        <span>Experts dentaires</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Quick Links -->
+                        <div class="footer-col links-col">
+                            <h3 class="footer-title">Navigation Rapide</h3>
+                            <nav class="footer-nav" aria-label="Navigation du pied de page">
+                                <ul class="footer-nav-list">
+                                    <li>
+                                        <a href="index.html" class="footer-link">
+                                            <i class="fas fa-chevron-right me-2"></i>
+                                            Accueil
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#about" class="footer-link">
+                                            <i class="fas fa-chevron-right me-2"></i>
+                                            À propos
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#services" class="footer-link">
+                                            <i class="fas fa-chevron-right me-2"></i>
+                                            Nos Services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#equipe" class="footer-link">
+                                            <i class="fas fa-chevron-right me-2"></i>
+                                            Notre Équipe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact" class="footer-link">
+                                            <i class="fas fa-chevron-right me-2"></i>
+                                            Contact & RDV
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            
+                            <!-- Emergency Contact -->
+                            <div class="emergency-contact">
+                                <div class="emergency-icon">
+                                    <i class="fas fa-phone-alt fa-lg"></i>
+                                </div>
+                                <div class="emergency-content">
+                                    <span class="emergency-label">Urgence dentaire 24h/24</span>
+                                    <a href="tel:+212661112233" class="emergency-number">
+                                        +212 661 112 233
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3: Social & Location -->
+                        <div class="footer-col social-col">
+                            <h3 class="footer-title">Suivez-nous</h3>
+                            
+                            <!-- Social Links -->
+                            <div class="social-links">
+                                <a href="https://facebook.com/dentora.agadir" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                
+                                <a href="https://instagram.com/dentora_agadir" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                
+                                <a href="https://wa.me/212661112233" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                
+                                <a href="https://maps.app.goo.gl/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                class="social-link maps">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Google Maps</span>
+                                </a>
+                            </div>
+                            
+                            <!-- Location Map -->
+                            <div class="location-section">
+                                <h4 class="location-title">
+                                    <i class="fas fa-map-pin me-2"></i>
+                                    Notre Centre à Agadir
+                                </h4>
+                                <div class="location-card">
+                                    <div class="location-info">
+                                        <div class="location-item">
+                                            <i class="fas fa-location-dot text-primary"></i>
+                                            <div>
+                                                <strong>Adresse :</strong>
+                                                <p class="mb-1">Rue du 20 Août, N°45<br>Quartier Talborjt, Agadir</p>
+                                            </div>
+                                        </div>
+                                        <div class="location-item">
+                                            <i class="fas fa-clock text-primary"></i>
+                                            <div>
+                                                <strong>Horaires :</strong>
+                                                <p class="mb-1">Lun-Ven: 8h30-19h<br>Samedi: 9h-13h</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Map Placeholder with Link -->
+                                    <a href="https://maps.app.goo.gl/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    class="map-link"
+                                    aria-label="Voir sur Google Maps">
+                                        <div class="map-placeholder">
+                                            <i class="fas fa-map fa-3x"></i>
+                                            <span>Voir sur la carte</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <!-- Copyright -->
+                        <div class="copyright">
+                            <p class="mb-0">
+                                <i class="far fa-copyright me-1"></i>
+                                2024 Dentora - Centre Dentaire d'Agadir. Tous droits réservés.
+                            </p>
+                        </div>
+                        
+                        <!-- Back to Top -->
+                        <a href="index.html" class="back-to-top" aria-label="Retour en haut de la page">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>Haut de page</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>
+    <!-- Loader -->
+    <script src="js/loader.js"></script>
+</body>
+</html>
