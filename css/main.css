@@ -2584,3 +2584,634 @@ address.contact-value {
         font-size: 0.95rem;
     }
 }
+
+/* Location Map ================================================================================================================== */
+/* ===== LOCATION MAP SECTION ===== */
+.location-map-section {
+    padding: 5rem 0;
+    background-color: var(--surface-light);
+    position: relative;
+}
+
+.location-map-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+    opacity: 0.1;
+}
+
+/* Map Header */
+.map-header {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.section-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--brand-accent);
+    background: rgba(0, 163, 214, 0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--deep-night);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    color: var(--text-main);
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Map Container */
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Google Maps Wrapper */
+.google-map-wrapper {
+    position: relative;
+    height: 500px;
+}
+
+.google-map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Map Overlay */
+.map-overlay {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.location-info-card {
+    background: var(--pure-white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 320px;
+    box-shadow: var(--shadow-lg);
+    pointer-events: auto;
+    animation: slideInLeft 0.5s ease-out;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--surface-muted);
+}
+
+.info-header i {
+    color: var(--brand-primary);
+    font-size: 1.5rem;
+}
+
+.info-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--deep-night);
+    margin: 0;
+}
+
+.info-content {
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item i {
+    color: var(--brand-accent);
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.info-item strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--deep-night);
+    margin-bottom: 0.25rem;
+}
+
+.info-item p,
+.info-item a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-main);
+    opacity: 0.9;
+    line-height: 1.4;
+    margin: 0;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: var(--brand-primary);
+    text-decoration: underline;
+}
+
+.info-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-direction,
+.btn-call {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-direction {
+    background: var(--brand-primary);
+    color: var(--pure-white);
+}
+
+.btn-direction:hover {
+    background: var(--brand-accent);
+    transform: translateY(-2px);
+}
+
+.btn-call {
+    background: var(--surface-light);
+    color: var(--brand-primary);
+    border: 1px solid var(--surface-muted);
+}
+
+.btn-call:hover {
+    background: var(--surface-muted);
+    color: var(--brand-accent);
+    transform: translateY(-2px);
+}
+
+/* Directions Panel */
+.directions-panel {
+    background: var(--pure-white);
+    padding: 2rem;
+    border-top: 1px solid var(--surface-muted);
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.panel-header i {
+    color: var(--brand-primary);
+    font-size: 1.25rem;
+}
+
+.panel-header h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--deep-night);
+    margin: 0;
+}
+
+.transport-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.transport-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.transport-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--surface-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.transport-icon i {
+    color: var(--brand-primary);
+    font-size: 1.25rem;
+}
+
+.transport-info h5 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--deep-night);
+    margin-bottom: 0.5rem;
+}
+
+.transport-info p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-main);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Landmarks Section */
+.landmarks-section {
+    background: var(--pure-white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+}
+
+.landmarks-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--deep-night);
+    margin-bottom: 1.5rem;
+}
+
+.landmarks-title i {
+    color: var(--brand-accent);
+}
+
+.landmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.landmark-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--surface-muted);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.landmark-item:hover {
+    background: var(--surface-light);
+    transform: translateY(-2px);
+}
+
+.landmark-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--brand-primary);
+    color: var(--pure-white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.landmark-icon i {
+    font-size: 1.1rem;
+}
+
+.landmark-info h5 {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--deep-night);
+    margin-bottom: 0.25rem;
+}
+
+.landmark-info p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-main);
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets (992px - 1199px) */
+@media (max-width: 1199.98px) {
+    .transport-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .landmarks-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991.98px) {
+    .location-map-section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+    }
+    
+    .google-map-wrapper {
+        height: 450px;
+    }
+    
+    .location-info-card {
+        width: 280px;
+        padding: 1.25rem;
+    }
+    
+    .info-actions {
+        flex-direction: column;
+    }
+    
+    .transport-options {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767.98px) {
+    .location-map-section {
+        padding: 3rem 0;
+    }
+    
+    .map-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1.05rem;
+    }
+    
+    .google-map-wrapper {
+        height: 400px;
+    }
+    
+    .map-overlay {
+        position: static;
+        top: auto;
+        left: auto;
+        padding: 1.5rem;
+    }
+    
+    .location-info-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        animation: none;
+    }
+    
+    .directions-panel {
+        padding: 1.5rem;
+    }
+    
+    .landmarks-section {
+        padding: 1.5rem;
+    }
+    
+    .landmarks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Portrait (below 576px) */
+@media (max-width: 575.98px) {
+    .location-map-section {
+        padding: 2.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+    
+    .section-label {
+        font-size: 0.8rem;
+        padding: 0.4rem 1.25rem;
+    }
+    
+    .google-map-wrapper {
+        height: 350px;
+    }
+    
+    .info-header h3 {
+        font-size: 1.125rem;
+    }
+    
+    .panel-header h4 {
+        font-size: 1.125rem;
+    }
+    
+    .landmarks-title {
+        font-size: 1.125rem;
+    }
+}
+
+/* Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .location-map-section {
+        padding: 6rem 0;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .google-map-wrapper {
+        height: 550px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .location-map-section {
+        background-color: var(--deep-night);
+    }
+    
+    .section-title {
+        color: var(--pure-white);
+    }
+    
+    .section-description {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .location-info-card {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .info-header h3 {
+        color: var(--pure-white);
+    }
+    
+    .info-header {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .info-item strong {
+        color: var(--pure-white);
+    }
+    
+    .info-item p,
+    .info-item a {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .btn-call {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: var(--brand-accent);
+    }
+    
+    .directions-panel {
+        background: rgba(255, 255, 255, 0.05);
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .panel-header h4 {
+        color: var(--pure-white);
+    }
+    
+    .transport-info h5 {
+        color: var(--pure-white);
+    }
+    
+    .transport-info p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .transport-icon {
+        background: rgba(11, 111, 166, 0.2);
+    }
+    
+    .transport-icon i {
+        color: var(--brand-accent);
+    }
+    
+    .landmarks-section {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .landmarks-title {
+        color: var(--pure-white);
+    }
+    
+    .landmark-item {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .landmark-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .landmark-info h5 {
+        color: var(--pure-white);
+    }
+    
+    .landmark-info p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+/* Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Accessibility */
+.btn-direction:focus,
+.btn-call:focus {
+    outline: 2px solid var(--brand-accent);
+    outline-offset: 2px;
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+    .location-info-card,
+    .landmark-item,
+    .btn-direction,
+    .btn-call {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* Google Maps iframe improvements */
+.google-map-wrapper iframe {
+    filter: grayscale(10%) contrast(1.1);
+}
+
+.google-map-wrapper:hover iframe {
+    filter: grayscale(0%) contrast(1);
+}
